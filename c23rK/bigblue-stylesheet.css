@@ -1,0 +1,145 @@
+body {
+font-family:  "museo-sans",sans-serif;
+max-width: 1100px;
+padding-left: 70px;
+padding-right: 30px;
+}
+
+label {
+display: block;
+float: left;
+width: 200px;
+}
+.name {
+text-align: right;
+	font-family: 'Cedarville Cursive', arial, serif;
+	font-size: 20px;
+}
+
+.date {
+text-align: right;
+font-family: "museo-sans",sans-serif;
+font-size: 10px;
+}
+a {
+font-family: "museo-sans",sans-serif;
+letter-spacing: 2px;
+font-size: 12px;	
+text-decoration: none;
+text-transform: uppercase;
+background-color: #8a3381;
+color: #f5adee;
+margin: 2px;
+padding: 2px 5px;
+	border-radius: 5px; 
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px;
+	
+}
+a:link {
+color: #f5adee;
+}
+a:visited {
+color: #f5adee;
+}
+a:hover, a:active {
+color: #ffffff;
+}
+
+img {
+border: 0;
+}
+
+p {
+margin: 0 0 13px;
+}
+
+input, textarea {
+border: 1px solid #99A4AF;
+padding: 3px 5px;
+font: inherit;
+width: 210px;
+vertical-align: middle;
+margin: 2px 0;
+}
+textarea {
+width: 300px;
+height: 120px;
+}
+input#submit {
+width: 80px;
+}
+
+#container {
+width: 100%;
+text-align: left;
+}
+	#topnav, #footer, .pagination {
+	margin: 0 auto;
+	text-align: right;
+
+	}
+	.pagination {
+	font-family: "museo-sans",sans-serif;
+	letter-spacing: 2px;
+	color: #999;
+font-size: 10px;
+text-transform: uppercase;
+	}
+	#topnav {
+	border-bottom: 1px dotted #CCC;
+	margin-bottom: 10px;
+	padding: 5px 0 10px;
+	}
+	#footer {
+	border-top: 1px solid #99A4AF;
+	margin-top: 10px;
+	padding: 10px 0 5px;
+	}
+	
+	#entries {
+	width: 100%;
+	border-collapse: collapse;
+	}
+	.entry {
+	padding: 5px;
+	border-radius: 5px; 
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px; 
+margin: 5px;
+border: 1px solid #ccc;
+	background-color: rgba(255, 255, 255, 0.7);
+	max-height: 200px;
+	overflow: auto;
+	float: left;
+	width: 300px;
+	font-size: 12px;
+	}
+		#entries tr td {
+			background-color: rgba(255,255,255,.8);
+			margin-bottom: 5px;
+		}
+		#entries tr.rowcolor1 td {
+		background-color: rgba(255,255,255,.8);
+		}
+		#entries td.meta {
+		width: 25%;
+		line-height: 1.5;
+		}
+		#entries td {
+		vertical-align: top;
+		padding: 10px;
+		}
+		#entries td img {
+		vertical-align: bottom;
+		}
+		
+span.bold {
+font-weight: bold;
+}
+.hidden {
+display: none;
+}
+.check {
+width: 14px;
+}

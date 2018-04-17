@@ -1,0 +1,801 @@
+<?php
+require('access.php');
+?>
+<!doctype html>
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang="en">
+   <![endif]-->
+   <!--[if IE 8]>
+   <html class="no-js lt-ie9" lang="en">
+      <![endif]-->
+      <!--[if gt IE 8]><!-->
+      <html class="no-js" lang="en">
+         <!--<![endif]-->
+         <head>
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+            <title>Jenina & Mike</title>
+            <link href="http://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet" type="text/css" />
+            <link href="http://fonts.googleapis.com/css?family=Cedarville+Cursive" rel="stylesheet" type="text/css" />
+            <link href="http://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet" type="text/css" />
+            <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+            <link href="http://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet" type="text/css" />
+            <link href="http://fonts.googleapis.com/css?family=Cedarville+Cursive" rel="stylesheet" type="text/css" />
+            <link rel="stylesheet" href="assets/css/reset.css" />
+            <link rel="stylesheet" href="assets/css/main.css" />
+            <link rel="stylesheet" href="refineslide.css" />
+            <script src="assets/js/jquery.js"></script>
+            <link rel="stylesheet" type="text/css" href="skins/tango/skin.css" />
+            <!--<script type="text/javascript" src="//use.typekit.net/icb7ute.js"></script>
+               <script type="text/javascript">try{Typekit.load();}catch(e){}</script>-->
+            <script src="jquery.carouFredSel-6.0.4-packed.js" type="text/javascript"></script>
+            <script type="text/javascript">
+               $(function() {
+               	$('#carousel').carouFredSel({
+               		width: '100%',
+               		items: {
+               			visible: 3,
+               			start: -1
+               		},
+               		scroll: {
+               			items: 1,
+               			duration: 1000,
+               			timeoutDuration: 3000
+               		},
+               		prev: '#prev',
+               		next: '#next',
+               		pagination: {
+               			container: '#pager',
+               			deviation: 1
+               		}
+               	});
+               });
+            </script>
+
+            <style type="text/css">
+               html, body {
+               height: 100%;
+               padding: 0;
+               margin: 0;
+               }
+               body {
+               min-height: 500px;
+               }
+               body * {
+               font-family: "museo-sans",sans-serif;
+               font-size: 14px;
+               color: #333;
+               line-height: 22px;
+               padding-top: 10px;
+               }
+               #wrapper {
+               background-color: #fff;
+               width: 100%;
+               overflow: hidden;
+               position: absolute;
+               left: 0;
+               }
+               .wrap.group {
+               margin-top: 500px;
+               }
+               #carousel img {
+               display: block;
+               float: left;
+               }
+               #prev, #next {
+               background-color: rgba(255, 255, 255, 0.7);
+               display: block;
+               height: 450px;
+               width: 50%;
+               top: 0;
+               position: absolute;
+               }
+               #prev:hover, #next:hover {
+               background-color: #fff;
+               background-color: rgba(255, 255, 255, 0.8);
+               }
+               #prev {
+               left: -480px;
+               }
+               #next {
+               right: -480px;
+               }
+               #pager {
+               margin-left: -470px;
+               position: absolute;
+               left: 50%;
+               bottom: 10px;
+               }
+               #pager a {
+               border: 1px solid rgba(255, 255, 255, 0.2);
+               border-radius: 5px;
+               display: inline-block;
+               width: 10px;
+               margin: 0 5px 0 0;
+               }
+               #pager a:hover {
+               background-color: rgba(255, 255, 255, 0.5);
+               }
+               #pager a span {
+               display: none;
+               }
+               #pager a.selected {
+               background-color: #fff;
+               }
+               #donate-spacer {
+               height: 100%;
+               }
+               #donate {
+               border-top: 1px solid #999;
+               width: 750px;
+               padding: 50px 75px;
+               margin: 0 auto;
+               overflow: hidden;
+               }
+               #donate p, #donate form {
+               margin: 0;
+               float: left;
+               }
+               #donate p {
+               width: 650px;
+               }
+               #donate form {
+               width: 100px;
+               }
+               #logo {
+               }
+               #nav {
+               font-size: 24px;
+               font-family: "museo-sans",sans-serif;
+               font-weight: 600;
+               letter-spacing: 3px;
+               text-transform: uppercase;
+               }
+               #footer1 {
+               margin-top: 0px;
+               background: url("images/az_subtle.png");
+               padding-top: 0px;
+               text-shadow: 0px 1px 0px rgba(255,255,255,.5); /* 50% white from bottom */
+               }
+               #copy1 {
+               font-family: "museo-sans",sans-serif;
+               margin-top:0px;
+               text-align: right;
+               color: #1e1e1e;
+               font-weight: normal;
+               padding-right: 5px;
+               font-size: 10px;
+               letter-spacing: 2px;
+               text-transform: uppercase;
+               cursor: pointer;
+               padding-top: 0px;
+               }
+               #orchid {
+               float: left;
+               position: relative;
+               top: -155px;
+               }
+               #bios {
+               margin-bottom: 100px;
+               }
+               .party {
+               float: left;
+               width: 250px;
+               margin: 7px;
+               background-color: #EEE;
+               border-color: 1px solid #CCC;
+               padding: 10px;
+               -moz-box-shadow: 1px 1px 3px #AAA;
+               -webkit-box-shadow: 1px 1px 3px #AAA;
+               box-shadow: 1px 1px 3px #AAA;
+               }
+               .party h2 {
+               margin-right: 10px;
+               }
+               .gallery {
+               float: left;
+               padding-right: 10px
+               }
+               .bio {
+               color: #999;
+               padding-left: 20px;
+               }
+               .bio h4 {
+               color: #555;
+               font-family: 'Cedarville Cursive', arial, serif;
+               font-size: 28px;
+               line-height: 25px;
+               }
+               .bio {
+               }
+               #nav-top {
+               width: 200px;
+               margin-left: auto;   margin-right: auto;
+               }
+               .button {
+               font-weight: normal;
+               font-size: 12px;
+               }
+               .gallery {
+               padding-top: 0px;
+               padding-right: 30px;
+               padding-bottom: 10px;
+               }
+               .gallery img {
+               margin-left: 5px;
+               padding-top: 0px;
+               border: 1px solid #aaa;
+               -moz-box-shadow: 0px 3px 8px #ccc;
+               -webkit-box-shadow: 0px 3px 8px #ccc;
+               box-shadow: 0px 3px 8px #ccc;
+               }
+               #rsvp-form-actual-form * {
+               padding-top: 0px;
+               }
+               #rsvp-form-actual-form input{
+               margin: 0 5px;
+               }
+               #top-buttons {
+               position: absolute;
+               right: 0px;
+               top: 0px;
+               }
+               #gbookcontainer {
+               height: 780px;
+               background: url(../images/guestbook.png);
+               background-repeat: no-repeat;
+               }
+               iframe {
+               width: 100%;
+               max-width: 1200px;
+               height: 590px;
+               }
+               #top-buttons * {
+               font-size: 10px;
+               }
+
+               .label {
+               display: inline-block;
+               width: 500px;
+               }
+            </style>
+            <script src="assets/js/modernizr.js"></script>
+            <!--[if lt IE 9]>
+            <script src="assets/js/respond.min.js"></script>
+            <![endif]-->
+         </head>
+         <body>
+            <div id="top-buttons" class="group">
+               <a id="download" href="#tuning">RSVP</a>
+               <a id="github" href="#guestbook">GUESTBOOK</a>
+            </div>
+            <div style="text-align: center; clear: both;">
+               <img src="images/logo.png" width="300" />
+            </div>
+            <div id="wrapper">
+               <div id="carousel">
+                  <img src="images/1.jpg" alt="building1" width="960" height="512" />
+                  <img src="images/2.jpg" alt="building2" width="960" height="512" />
+                  <img src="images/3.jpg" alt="building3" width="960" height="512" />
+                  <img src="images/4.jpg" alt="building4" width="960" height="512" />
+                  <img src="images/5.jpg" alt="building5" width="960" height="512" />
+                  <img src="images/6.jpg" alt="building6" width="960" height="512" />
+                  <img src="images/7.jpg" alt="building6" width="960" height="512" />
+                  <img src="images/8.jpg" alt="building6" width="960" height="512" />
+                  <img src="images/9.jpg" alt="building6" width="960" height="512" />
+                  <img src="images/10.jpg" alt="building6" width="960" height="512" />
+               </div>
+               <a style="height: 540px;" href="#" id="prev" title="Show previous"> </a>
+               <a style="height: 540px;" href="#" id="next" title="Show next"> </a>
+            </div>
+            <div class="wrap group">
+               <div class="group section-wrap" style="padding-bottom:8px;">
+                  <nav id="nav">
+                     <ul class="group">
+                        <li><a href="#installation">Our Story<br />
+                           <span>- About Us -</span>
+                           </a>
+                        </li>
+                        <li class="nav-2"><a href="#faq">Events<br />
+                           <span>- and Pictures -</span>
+                           </a>
+                        </li>
+                        <li class="nav-3"><a href="#about">Entouarge<br />
+                           <span>- Bridal Party -</span>
+                           </a>
+                        </li>
+                        <li class="nav-4"><a href="#tuning">Big Day<br />
+                           <span>- Wedding Day Info -</span>
+                           </a>
+                        </li>
+                     </ul>
+                  </nav>
+                  <ul id="pages">
+                     <li id="_installation">
+                        <h2 class="subtitle">Our Story <span>About Jenina and Mike</span></h2>
+                        <ol>
+                        </ol>
+                     </li>
+                     <!-- /#installation -->
+                     <li id="_tuning">
+                        <h2 class="subtitle">The Big Day <span>Accomodations and Itinerary on the Wedding Day</span></h2>
+                        <ol>
+                           <li>
+
+                              <h4>Short Stay</h4>
+                              We have arranged with the Meridian Hotel, which is conveniently located next door to the reception, to block a set of rooms for our wedding attendants. They happen to be our caterer as well.
+<h3>Rates</h3>
+							  Hotel is pleased to confirm the following special 2013 net, non-commissionable guest room rates:
+								<br><br>
+							  <div class="label">Dates available:</div> 		8/30, 8/31<br><br>
+							 <div class="label"> Run of House</div> 			$219<br>
+							  <div class="label">Studio</div>				$219<br>
+							  <br>
+							 <div class="label">Additional Person:</div>    $ 20.00 per person<br>
+
+							  All guest room rates are quoted exclusive of applicable state and local taxes, currently 15.57%.
+
+							  <h3>To Reserve</h3>
+							  Le Meridien understands that reservations will be made by individual. Please kindly advise your attendees to
+							  call 1-866-837-4184
+							  to arrange their hotel reservations and mention Clamor / Chang Wedding for the special group rate.
+
+
+							  <h3>Reservation Deadline</h3>
+							  All the rooms provided for in your room block will be reserved on a definite basis for you upon signing of this
+							  contract.  In order to assign specific room types to your attendees we ask that all room requests be received by
+							  Wednesday, July, 31, 2013 prior to your major arrival day of Friday, August 30, 2013.
+							  <h3>Check-In & Check-Out Times</h3>
+							  Standard check out time is 12:00 noon. Check-in time is 3:00 PM. Please let us know if you require any special
+							  arrangements.
+
+
+                           </li>
+							<li>
+							<h4>Longer Stay</h4>
+							There are several hotels in the area if you choose not to extend your stay at the Meridian.
+							However, if you do intend on staying at the Meridian, please book it at the same time the rate above is booked for those 2 days.
+							</li>
+                           <li>
+                           	<h4>Travel</h4>
+                           	<h3>Parking at the Reception</h3>
+
+							  Discounted Valet Parking $30 per car at the Meridian Hotel, located right next door.<br> Please note that this is only for the reception. For the Cathedral there are plenty of free parking located on-site.
+                           </li>
+                           <li>
+                              <h4>Time & Date</h4>
+                              Ceremony begins at 2PM on August 31, 2012
+
+                           <li>
+                              <h4>Venues</h4>
+                              <div clas="label">Ceremony</div><strong>Cathedral of Saint Mary of the Assumption</strong>  1111 Gough Street, San Francisco, CA 94109<br>
+                              <div clas="label">Reception</div><strong>Bentley Reserve</strong>  301 Battery Street  San Francisco, CA 94111<br>
+                           </li>
+                           </li>
+                           <h4>RSVP to the Wedding</h4>
+                           <form id="rsvp-form-actual-form" enctype="multipart/form-data" action="http://changmike.com/rsvp/use/RSVP/process.php" method="post">
+                              <table border="0" cellspacing="1" style="border-collapse: collapse" cellpadding="5">
+                                 <tr>
+                                    <td height="30" width="189">
+                                       <font face="Verdana" size="2" />First Name
+                                    </td>
+                                    <td height="30" width="469">
+                                       <font face="Verdana" /><input type="text" name="FirstName" />
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td height="30" width="189">
+                                       <font face="Verdana" size="2" />Last Name
+                                    </td>
+                                    <td height="30" width="469">
+                                       <font face="Verdana" /><input type="text" name="LastName" />
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td height="30" width="189">
+                                       <font face="Verdana" size="2" />Contact Number
+                                    </td>
+                                    <td height="30" width="469">
+                                       <font face="Verdana" /><input type="text" name="ContactNumber" />
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td height="30" width="189">
+                                       <font face="Verdana" size="2" />Address
+                                    </td>
+                                    <td height="30" width="469">
+                                       <font face="Verdana" /><input type="text" name="Address" />
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td height="30" width="189">
+                                       <font face="Verdana" size="2" />Email
+                                    </td>
+                                    <td height="30" width="469">
+                                       <font face="Verdana" /><input type="text" name="Email" />
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td height="30" width="189">
+                                       <font face="Verdana" size="2" />Attending
+                                    </td>
+                                    <td height="30" width="469">
+                                       <font face="Verdana" /><input type="radio" name="Attending" value="Yes" />Yes<input type="radio" name="Attending" value="No" />No<br />
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td height="30" width="189">
+                                       <font face="Verdana" size="2" />Guest of
+                                    </td>
+                                    <td height="30" width="469">
+                                       <font face="Verdana" /><input type="radio" name="Guestof" value="Jenina" />Jenina<input type="radio" name="Guestof" value="Mike" />Mike<input type="radio" name="Guestof" value="Both" />Both<br />
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td height="30" width="189">
+                                       <font face="Verdana" size="2" />Choice of Menu
+                                    </td>
+                                    <td height="30" width="469">
+                                       <font face="Verdana" /><input type="radio" name="ChoiceofMenu" value="Beef" />Beef<br /><input type="radio" name="ChoiceofMenu" value="Fish" />Fish<br /><input type="radio" name="ChoiceofMenu" value="Vegetarian" />Vegetarian<br />
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td height="30" width="189">
+                                       <font face="Verdana" size="2" />Wishes and Notes
+                                    </td>
+                                    <td height="30" width="469">
+                                       <font face="Verdana">
+                                          <input type="text" name="WishesandNotes" />
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                 <td>
+                                 </td>
+                                 <td>
+                                 <input type="submit" value="Submit Form" /></font>
+                                 </td>
+                                 </tr>
+                              </table>
+                           </form>
+                           </li>
+                        </ol>
+                     </li>
+                     <!-- /#tuning -->
+                     <li id="_guestbook">
+                        <div id="gbookcontainer">
+                           <iframe frameBorder="0" src="http://jeninaandmike.com/c23rK/index.php"></iframe>
+                        </div>
+                     </li>
+                     <li id="_faq">
+                        <h2 class="subtitle">All Sorts of Events<span>It's Time to Celebrate!</span></h2>
+                        <ol>
+                           <li>
+                              <h4>Enagement Party #1</h4>
+                              <h3>Hosted by Mr. & Mrs. Jess Clamor</h3>
+                              11/10/12 Las Vegas, NV, Clamor Residence</span><br />
+                              Our engagement party was a success! Thanks to Mr. and Mrs. Clamor (Jenina's wonderful parents), we were able to have a dream engagement party surrounded by all the people we love. Thanks to everyone that were able to come out. It was a special time and reminded us of how fortunate we are.
+                              Thank you especially the Jenina's parents, for opening your home and celebrating this special time with us. I am blessed and looking forward to having you as my in-laws.
+                              See the pictures here.
+                           </li>
+                           <li>
+                              <h4>
+                                 Engagement Party #2
+                              </h4>
+                              <h3>Hosted by Geraldine & Charmayne</h3>
+                              <br />
+                              <span class="small">12/16/12 Foster City, CA</span> <br />
+                              Sunday, December 16 at 11:00 AM to Sunday, December 16 at 2:30 PM<br />
+                              Come join us for a Sunday Brunch Buffet to celebrate Jenina and Mike's engagement! Experience Sunday brunch surrounded by streams of koi ponds and waterfalls! Featuring : a fresh bakery, omelette/waffle stations, fresh seafood, salad bar, imported and domestic cheeses, carving stations with prime rib, seasonal hot entrees, spectacular dessert displays & much more!
+                              Adults: $28.95
+                              Children (5-12) $15.95 (4-under) free
+                              Please RSVP by Sunday, 12/9/12
+                           </li>
+                           <li>
+                              <h4>
+                                 Bridal Shower
+                              </h4>
+                              Time and location to be determined. We'll announce it on this website!
+                           </li>
+                           <li>
+                              <h4>
+                                 Bachelorette Party #1
+                              </h4>
+                              <h3>Hosted by Geraldine, Maid of Honor</h3>
+                              Time and location to be determined. We'll announce it on this website!
+                           </li>
+                                                      <li>
+						                                 <h4>
+						                                    Bachelorette Party #2
+						                                 </h4>
+						                                 <h3>Hosted by Jamie, Matron of Honor</h3>
+						                                 Time and location to be determined. We'll announce it on this website!
+                           </li>
+                           <li>
+                              <h4>
+                                 Bachelor Party
+                              </h4>
+                              <h3>Hosted by John, Best Man</h3>
+                              Time and location to be determined. We'll announce it on this website!
+                           </li>
+                        </ol>
+                        <div align="center">
+                           <img width="300px;" src="images/divider_big_transparent.png" />
+                        </div>
+                     </li>
+                     <!-- /#faq -->
+                     <li id="_about">
+                        <h2 />
+                        The Lineup</h4>
+                        <ul id="mycarousel" class="jcarousel jcarousel-skin-tango">
+                           <li><img src="entourage/jamie.png" width="80" height="107" alt="" /></li>
+                           <li class="mike"><img src="entourage/john.png" width="80" height="107" alt="" /></li>
+                           <li><img src="entourage/geraldine.png" width="80" height="107" alt="" /></li>
+                           <li class="mike"><img src="entourage/gene.png" width="80" height="107" alt="" /></li>
+                           <li><img src="entourage/hanna.png" width="80" height="107" alt="" /></li>
+                           <li class="mike"> <img src="entourage/liwei.png" width="80" height="107" alt="" /></li>
+                           <li> <img src="entourage/marivic.png" width="80" height="107" alt="" /></li>
+                           <li><img src="entourage/mansi.png" width="80" height="107" alt="" /></li>
+                           <li class="mike"><img src="entourage/albert.png" width="80" height="107" alt="" /></li>
+                           <li><img src="entourage/johanna.png" width="80" height="107" alt="" /></li>
+                           <li class="mike"><img src="entourage/bhaskar.png" width="80" height="107" alt="" /></li>
+                           <li class="mike"><img src="entourage/kevin.png" width="80" height="107" alt="" /></li>
+                        </ul>
+                        <div id="bios">
+                           <div id="jamie" class="party">
+                              <h2 />
+                              Matron of Honor</h4>
+                              <div class="gallery">
+                                 <br /><img width="100" height="108" src="entourage/jamie-large.png" />
+                              </div>
+                              <div class="bio">
+                                 <h4>Jamie Vallestero</h4>
+                                 Jamie and I have been cousins for years. We have been good friends too.<br />
+                                 -Jenina
+                                 <br /><br />
+                                 Jenina is a nice cousin. She's been there when I needed her.<br />
+                                 -Jamie<br />
+                                 <a href="entourage/jamiefamily.png" rel="lightbox" title="my caption">Jamie, Dwight, and Darren at Our Engagement Party in Vegas</a>
+                              </div>
+                           </div>
+                           <div id="john" class="party">
+                              <h2 />
+                              Best Man</h4>
+                              <div class="gallery">
+                                 <br /><img  width="100" height="108"  src="entourage/john-large.png" />
+                              </div>
+                              <div class="bio">
+                                 <h4>John Yi</h4>
+                                 <p>
+                                    <strong>When did they meet?</strong> <br />September 2003<br />
+                                 </p>
+                                 <p>
+                                    <strong>How did they meet?</strong>	 <br />Rushing for the same fraternity
+                                 </p>
+                                 <p>
+                                    <strong>Where did they meet?</strong> On the steps of the University of Michigan Union building
+                                 </p>
+                                 <p>
+                                    "The first time I saw Mike Chang was at the steps of the Michigan Union waiting for the start of a Pi Alpha Phi rush event. We were both 18 year old college freshmen getting ourselves into something we really had no business doing.
+                                 </p>
+                                 <p>
+                                    Nevertheless, this process of brotherhood and hazing made me come to appreciate and cherish a then-thugged out FOB with whom I shared little to no common interest with. To this day we are still very little alike but it is through such adversity and conflict, like the U.S. Civil War, we have managed to fight and hate but eventually reunite under a loose banner of mutual understanding and reluctant friendship.
+                                 </p>
+                                 <p>
+                                    Nevertheless, despite his impatient temperament and an obstinate personality based on cold logic and reasoning, Mike has managed to find the opposite in his life companion, his wife to be Jenina. While Mike may lack common courtesy and manners, Jenina's graceful smile can light up an entire ball room. While Mike's broken English and incorrect usage of common American idioms can create uncomfortable silence and eyebrow raises, Jenina has mastered the communication of comfort and compassion, traits so essential in a nurse.
+                                 </p>
+                                 <p>
+                                    Yes you may call it a companionship of Yin and Yang, of night and day, or of cold and hot. I'd like to call it a band-aid on a gushing wound or a much needed amputation of a badly infected toe.
+                                 </p>
+                                 <p>
+                                    But all jokes aside, Mike is an exceptional man who has so much to give to the world and I'm proud to be his best man."
+                                 </p>
+                              </div>
+                           </div>
+                           <div id="geraldine" class="party">
+                              <h2 />
+                              Maid of Honor</h4>
+                              <div class="gallery">
+                                 <br /><img  width="100" height="108"  src="entourage/geraldine-large.png" />
+                              </div>
+                              <div class="bio">
+                                 <h4>Geraldine Nisperos</h4>
+                                 Jamie and I have been cousins for years. We have been good friends too.<br />
+                                 -Jenina
+                                 <br /><br />
+                                 Jenina is a nice cousin. She's been there when I needed her.<br />
+                                 -Jamie<br />
+                                 <a href="entourage/jamiefamily.png" rel="lightbox" title="my caption">Jamie, Dwight, and Darren at Our Engagement Party in Vegas</a>
+                              </div>
+                           </div>
+                           <div id="albert" class="party">
+                              <h2 />
+                              Groomsman</h4>
+                              <div class="gallery">
+                                 <br /><img  width="100" height="108"  src="entourage/albert-large.png" />
+                              </div>
+                              <div class="bio">
+                                 <h4>Albert Hu</h4>
+                                 How did they meet?
+                                 A night out in San Francisco through mutual friend Sandra
+                                 When did they meet?
+                                 July 2007
+                                 Where did they meet?
+                                 San Francisco State University apartment
+                                 <p>Albert, affectionately known to Mike as Alby, met Mike through a mutual friend on a night out in San Francisco. Albert did not like Mike at first, but grew to love him the more he gets to know him.</p>
+                                 <p>Mike considers Albert one of his "boys", and hangs out with him every now and then even though they don't live near each other anymore. Their work life crossed paths at one point where both of them were working for Cisco. They like to talk in geek, and celebrates everytime Mike gets a new job with a bottle of champagne at Straits. Albert likes to salvage items from Mike's electronic junk yard. Albert also likes to deadlift, squat, and eat.</p>
+                              </div>
+                           </div>
+                           <div id="gene" class="party">
+                              <h2 />
+                              Groomsman</h4>
+                              <div class="gallery">
+                                 <br /><img  width="100" height="108"  src="entourage/gene-large.png" />
+                              </div>
+                              <div class="bio">
+                                 <h4>Gene Kim</h4>
+                                 <p>
+                                    <strong>When did they meet?</strong> <br />September 2003<br />
+                                 </p>
+                                 <p>
+                                    <strong>How did they meet?</strong>	 <br />Rushing for the same fraternity
+                                 </p>
+                                 <p>
+                                    <strong>Where did they meet?</strong> On the steps of the University of Michigan Union building
+                                 </p>
+                                 <p>
+                                    Gene was one of Mike's closest friends in college. He came from Korea to study in the US and befriended Mike through their fraternity at the University of Michigan. <br />
+                                    They have gone through good and rough times together and were witnesses of each other's personal growths over the years. Gene has cooked plenty of Korean food for Mike. Gene has since moved back to Korea. They have remained friends after all this time. As a testament to their relationship, Gene is going to fly over to the US 3 times for Mike (engagement party, bachelor party, and wedding).
+                                 </p>
+                              </div>
+                           </div>
+                           <div id="bhaskar" class="party">
+                              <h2 />
+                              Groomsman</h4>
+                              <div class="gallery">
+                                 <br /><img  width="100" height="108"  src="entourage/bhaskar-large.png" />
+                              </div>
+                              <div class="bio">
+                                 <h4>Bhaskar Bhattacharjee</h4>
+                                 <p>
+                                    <strong>When did they meet?</strong> <br />May 2007<br />
+                                 </p>
+                                 <p>
+                                    <strong>How did they meet?</strong>	 <br />Co-workers
+                                 </p>
+                                 <p>
+                                    <strong>Where did they meet?</strong><br /> Cisco Building 22, Second Floor
+                                 </p>
+                                 <p>
+                                    <strong>CSCO price when they worked together</strong><br />-32%
+                                 </p>
+                                 <p>
+                                    Mike met Bhaskar as a new intern at now-defunct Cisco Systems. This was Mike's first job in the United States, and the beginning of his engineering career. Mike was recruited as an intern in Bhaskar's group. They became friends since then.
+                                 </p>
+                                 <p>
+                                    After Mike left to finish his school work, he was in talk with Cisco again for a possible 2-peat. Bhaskar encouraged this move, and since then Bhaskar regained the 20 pounds he lost while Mike was gone. The have eaten at every single restaurant within 20 miles of Milpitas over the time they've worked together.
+                                 </p>
+                              </div>
+                           </div>
+                           <div id="hanna" class="party">
+                              <h2 />
+                              bridesmaid</h4>
+                              <div class="gallery">
+                                 <br /><img  width="100" height="108"  src="entourage/hanna-large.png" />
+                              </div>
+                              <div class="bio">
+                                 <h4>Hanna Chang</h4>
+                                 <strong>When did they meet?</strong> <br />March 1989<br /></p>
+                                 <p>
+                                    <strong>How did they meet?</strong>	 <br />Mike wanted to see what the fuss is about
+                                 </p>
+                                 <p>
+                                    <strong>Where did they meet?</strong><br />Taiwan
+                                 </p>
+                                 Hanna is one of the oldest friends Mike has on this list. They were the best of friends growing up, and still today Mike does not hesitate to call Hanna for any problem he has. She accompanies Mike through all his moves in Taiwan, Canada, and California. Sure they had their qurrels, but Hanna is forever one of Mike's favorite siblings.
+                                 <p></p>
+                              </div>
+                           </div>
+                           <div id="johanna" class="party">
+                              <h2 />
+                              bridesmaid</h4>
+                              <div class="gallery">
+                                 <br /><img  width="100" height="108"  src="entourage/johanna-large.png" />
+                              </div>
+                              <div class="bio">
+                                 <h4>Johanna Chang</h4>
+                                 Hanna is Mike's sister and his favorite sibling.
+                                 <a href="entourage/jamiefamily.png" rel="lightbox" title="my caption">Jamie, Dwight, and Darren at Our Engagement Party in Vegas</a>
+                              </div>
+                           </div>
+                           <div id="liwei" class="party">
+                              <h2 />
+                              groomsman</h4>
+                              <div class="gallery">
+                                 <br /><img  width="100" height="108"  src="entourage/liwei-large.png" />
+                              </div>
+                              <div class="bio">
+                                 <h4>Li-Wei Wu</h4>
+                                 <p><strong>How did they meet?</strong><br />
+                                    Don't remember, but should have involved their parents
+                                 </p>
+                                 <p>
+                                    <strong>When did they meet?</strong><br />
+                                    1985
+                                 </p>
+                                 <p>Li-Wei is a honored guest from Taiwan, and Mike's eldest cousin, or Mike's Mother's Elder-Sister's Child.</p>
+                                 <p> Mike remembers that everytime they saw each other in their childhood, the adults loved to stand us side by side and compare our heights. Li-Wei was a good 5-inches taller than Mike for most of Mike's life. Mike's memories of Li-Wei includes playing in the mud, Li-Wei's kindness in giving his Dragon Ball stickers collection, buying Crayon Shin Chan comics from the stores in Miao-Li. He is Mike's closest cousin, and Mike cannot be more grateful than having Li-Wei attend his wedding.
+                              </div>
+                           </div>
+                           <div id="kevin" class="party">
+                              <h2 />
+                              groomsman</h4>
+                              <div class="gallery">
+                                 <br /><img  width="100" height="108"  src="entourage/kevin-large.png" />
+                              </div>
+                              <div class="bio">
+                                 <h4>Kevin Liang</h4>
+                                 <p><strong>How did they meet?</strong><br />
+                                    Meeting to discuss potentially living together
+                                 </p>
+                                 <p><strong>
+                                    When did they meet?</strong><br />
+                                    March 2011
+                                 </p>
+                                 <p><strong>
+                                    Where did they meet?</strong><br />
+                                    Banana Leaf
+                                 </p>
+                                 <p>
+                                    Kevin met with Mike through their mutual friend Kharen. Kevin at the time was new to California and looking for a place to stay for his new job at Cisco systems. Kevin was Mike's roommate for the past year.
+                                 </p>
+                                 <p>
+                                    As a well-to-do professional, he is one of the few friends that my parents liked (the rest being the ones listed here). They shared their passion for fitness and hip hop. Like Mike, Kevin has lived in multiple countries and states in his life. Mike found it incredible that they had so much in common, and attributed it to the fact that they are both half-Hakka. Kevin enjoys basketball and "rap-beefs."
+                                 </p>
+                                 </p>
+                              </div>
+                           </div>
+                           <div id="mansi" class="party">
+                              <h2 />
+                              bridesmaid</h4>
+                              <div class="gallery">
+                                 <br /><img  width="100" height="108"  src="entourage/mansi-large.png" />
+                              </div>
+                              <div class="bio">
+                                 <h4>Mansi Shah</h4>
+                                 Mansi grew up with Jenina and has been one of her best friends.
+                              </div>
+                           </div>
+                           <div id="marivic" class="party">
+                              <h2 />
+                              bridesmaid</h4>
+                              <div class="gallery">
+                                 <br /><img  width="100" height="108"  src="entourage/marivic-large.png" />
+                              </div>
+                              <div class="bio">
+                                 <h4>Marivic Lee</h4>
+                                 Mansi grew up with Jenina and has been one of her best friends.
+                              </div>
+                           </div>
+                        </div>
+               </div>
+               <br /><br />
+               </li> <!-- /#about -->
+               </ul> <!-- /#pages -->
+            </div>
+            <!-- /.section-wrap -->
+            </div> <!-- /.wrap -->
+            <div id="footer1">
+               <div id="copy1">&copy; 2012 to Forever, Jenina Clamor & Mike Chang </div>
+            </div>
+            <link href="lightbox.css" rel="stylesheet" />
+            <script src="assets/js/jquery.scrollto.js"></script>
+            <script src="lightbox.js"></script>
+            <script src="jquery.refineslide.min.js"></script>
+            <script src="assets/js/ios-orientation-change-fix.js"></script>
+            <script src="assets/js/footer.js"></script>
+            <script src="masonry.js"></script>
+            <script type="text/javascript" src="lib/jquery.jcarousel.min.js"></script>
+            <script type="text/javascript"></script>
+         </body>
+      </html>

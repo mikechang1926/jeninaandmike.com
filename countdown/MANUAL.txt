@@ -1,0 +1,30 @@
+First of all; thanks for purchasing this countdown template, i hope you'll enjoy it.
+
+1) SET YOUR LOGO (the hardest part) ---------------------------------------------------------
+
+	1.1) Open the psd (if you don't have photoshop, go to 1.2), copy your logo in it.
+	     Save the logo 1 time with transparant background as logo.png inside the folder 'img' 
+	     and 1 time with the dark background inside the folder 'img/IE_6' as logo.jpg
+
+	1.2) If you don't have photoshop, make a banner from 735x108 px with your logo in it.
+	     Save it once with transparant background as logo.png inside the folder 'img' and
+	     one time with a dark background inside the folder 'img/IE_6' as logo.jpg
+
+
+2) CONFIG COUNTER AND TEXT --------------------------------------------------------------------
+
+	Open the file index.html in a texteditor (notepad++). You'll see 'Give the date', 
+	change the value's to your personal preferences. Idem with the text and the social 
+	network URL's. If you want to hide a social network, enter the value 'hide'.
+	Don't forget the page title and favicon. Hit save.
+
+
+3) FINISHING ---------------------------------------------------------------------------------
+
+	Copy the files 'index.html' and the folder 'countdown_files' to
+	your server.
+
+	If you have some problems setting up, mail me. info@confix.be
+
+
+Thanks for reading :)

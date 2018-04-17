@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>AllInOne</title>
+<!-- must have -->
+<link href="allinone_bannerRotator.css" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+<script src="js/jquery.ui.touch-punch.min.js" type="text/javascript"></script>
+<script src="js/allinone_bannerRotator.js" type="text/javascript" charset="utf-8"></script>
+<!--[if IE]><script src="js/excanvas.compiled.js" type="text/javascript"></script><![endif]-->
+<!-- must have -->
+
+
+
+
+	<script>
+		$(function() {
+
+			$('#allinone_bannerRotator_universal').allinone_bannerRotator({
+				skin: 'universal',
+				width: 295,
+				height: 600,
+				numberOfStripes:4,
+				numberOfRows:5,
+				numberOfColumns:5,				
+				showAllControllers:true,
+				showBottomNav:false,
+				showCircleTimer:false
+			});		
+			
+			
+		});
+	</script>
+</head>
+
+<body bgcolor="#999999">
+
+	 <div style="width:900px; height:400px; margin:10px auto 0 auto;">
+     <!-- giant -->
+            <div id="allinone_bannerRotator_universal" style="display:none;">
+            	<ul class="allinone_bannerRotator_list">
+                    <!-- IMAGES -->
+                    <li data-link="http://codecanyon.net/user/LambertGroup" data-target="_blank"><img src="images/sidebar1/sidebar_01.jpg" alt="" /></li>
+                    <li data-link="http://codecanyon.net/user/LambertGroup" data-target="_blank"><img src="images/sidebar1/sidebar_02.jpg" alt="" /></li>
+                    <li><img src="images/sidebar1/sidebar_03.jpg" alt="" /></li>
+                    <li><img src="images/sidebar1/sidebar_04.jpg" alt="" /></li>
+                </ul>            
+           </div>  
+           
+  
+	</div>
+
+</body>
+</html>
